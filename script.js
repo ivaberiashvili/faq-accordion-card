@@ -1,22 +1,17 @@
 const  allQuestions = document.querySelectorAll('.faq');
 
 allQuestions.forEach(faq => {
-    faq.addEventListener('click',()=>{
-    // * if you want to allow only one active tabs. 
+    faq.addEventListener('click',(event)=>{
+    // * if you want to allow only one active tabs.
+    // remove all active elements 
         let active = document.querySelector('.active'); 
         if(active){
             active.classList.remove('active');
         }
-    // * if you want to allow n nuber of active tabs. 
-        // let actives = document.querySelectorAll('.active'); 
-        // if(actives.length > 0){
-        //     console.log(actives.length);
-        //     actives.forEach(active => {
-        //         active.classList.remove('active');
-        //     })
-        // } 
-
-        faq.classList.toggle('active'); 
+    // toggle active, if clicked element isn't active
+        if(faq !== active){
+            faq.classList.toggle('active'); 
+        }
     });
 });
 

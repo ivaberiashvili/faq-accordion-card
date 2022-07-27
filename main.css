@@ -224,7 +224,7 @@ h2{
     color:#787887;  
     font-weight: 400;
     font-size: 0.75rem;
-    line-height: 0.75rem;
+    line-height: 1.125rem;
     margin-bottom:16px;
 }
 @media(min-width:992px){
